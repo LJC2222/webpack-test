@@ -2,6 +2,7 @@ const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 /** @type {import('webpack').Configuration} */
 module.exports = {
+  mode: "development",
   entry: {
     index: "./src/index.js",
     print: "./src/print.js",
@@ -13,7 +14,8 @@ module.exports = {
   },
   plugins: [
     new htmlWebpackPlugin({
-      title: "Output Management",
+      title: "Development",
     }),
   ],
+  devtool: "inline-source-map",
 };
